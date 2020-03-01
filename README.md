@@ -14,7 +14,7 @@ Course Created by Wes Bos
 ## Course Content
 
 - [x] [The Basics](01-the-basics/README.md)
-- [ ] Functions
+- [x] [Functions](02-functions/README.md)
 - [ ] The Tricky Bits
 - [ ] The DOM - Working with HTML and CSS
 - [ ] Events
