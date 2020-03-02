@@ -1,6 +1,7 @@
 # The Tricky Bits
 
 - [Scope](#scope)
+- [Hoisting](#hoisting)
 
 
 ## Scope
@@ -184,3 +185,51 @@ yell(); // Uncaught ReferenceError: yell is not defined
 ```
 
 Just like variables, functions are scoped to the parent function. So `yell` function above is only accessible inside `sayHi` function, and not outside it.
+
+
+## Hoisting
+
+Allows us to access functions and variables _before_ they are created.
+
+2 things that are hoisted in JavaScript:
+
+- Function declarations
+- Variable declarations
+
+### Function hoisting
+
+JavaScript compiler will take all function declarations and move them to the top of the file available for use.
+
+```js
+sayHi(); // Hi
+
+function sayHi() {
+  console.log('Hi');
+}
+```
+
+**Best practice**: Always define functions _before_ using them.
+
+```js
+add(10,20); // Uncaught ReferenceError: Cannot access 'add' before initialization
+
+const add = function(a,b) {
+  return a + b;
+}
+```
+
+**Note**: Functions made using a variable are not hoisted.
+
+### Variable hoisting
+
+JavaScript hoists the variable declaration but not the actual setting of the values or assignment.
+
+```js
+console.log(age); // undefined
+var age = 10;
+
+// JavaScript converts the code into:
+var age;
+console.log(age); // undefined
+age = 10;
+```
