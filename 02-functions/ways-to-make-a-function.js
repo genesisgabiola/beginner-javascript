@@ -72,7 +72,7 @@ const genesis = {
     console.log('HEY GENESISSSS');
   },
   // Arrow function
-  wisperHi: () => {
+  whisperHi: () => {
     console.log('hii genesisss im a mouse');
   },
 };

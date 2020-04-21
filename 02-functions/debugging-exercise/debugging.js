@@ -31,7 +31,7 @@ function doALotOfStuff() {
 */
 
 /**
-// Callstack
+// Callstack or Stack Trace
 function doctorize(name) {
   return `Dr. ${name}`;
 }
