@@ -13,10 +13,10 @@ Course Created by Wes Bos
 
 ## Course Content
 
-- [x] [The Basics](01-the-basics/README.md)
-- [x] [Functions](02-functions/README.md)
-- [ ] The Tricky Bits
-- [ ] The DOM - Working with HTML and CSS
+- [x] [The Basics](./01-the-basics)
+- [x] [Functions](./02-functions)
+- [x] [The Tricky Bits](./03-the-tricky-bit)
+- [ ] [The DOM - Working with HTML and CSS](./04-the-dom)
 - [ ] Events
 - [ ] Serious Practice Exercises
 - [ ] Logic and Flow Control
