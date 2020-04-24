@@ -1,6 +1,7 @@
 # Working with HTML and CSS
 
 - [Introduction to the document](#introduction-to-the-document)
+- [Selecting Element](#selecting-element)
 
 
 ## Introduction to the document
@@ -40,4 +41,38 @@ A big part of working with JavaScript in the Web Browser is interacting with ele
 - Displays information about the browser
 - Including the connected device itself, like webcam, audio, battery level, GPS coordinates, and other specific features live on navigator
 
+
+## Selecting Element
+
+**Note**: Always load scripts before the closing body tag (`</body>`) when selecting elements on the page. All elements must be loaded first before we start selecting them in JavaScript. We get `null` if we try to grab elements placing the `<script>` tag in the `<head>` because the elements are not yet created when the JavaScript is run.
+
+**Alternative**: When `<script>` is in the `<head>`.
+
+- Use defer and async
+- Listen for the `DOMContentLoaded` event and then try to select elements from the page
+
+### `querySelector()`
+
+Returns first match
+
+```js
+const p = document.querySelector('p');
+```
+
+### `querySelectorAll()`
+
+Returns all matches as a **NodeList** (like array but without array helper functions)
+
+```js
+const p = document.querySelectorAll('p');
+```
+
+In `querySelector()` and `querySelectorAll()`, the argument we pass are almost exactly the same as CSS Selectors.
+
+We can use things like:
+
+- `.item` (element with class of item) or `div.item` (div with class of item)
+- **Parent-child selector** to grab images inside div with class item (`'.item img'`)
+
+**Note**: We also have dated ways of selecting elements from DOM like `getElementById()`, `getElementsByClassName()`, `getElementsByTagName()`, and etc.
 
