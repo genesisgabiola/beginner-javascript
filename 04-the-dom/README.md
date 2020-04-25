@@ -1,7 +1,8 @@
 # Working with HTML and CSS
 
 - [Introduction to the document](#introduction-to-the-document)
-- [Selecting Element](#selecting-element)
+- [Selecting Elements](#selecting-elements)
+- [Element Properties and Methods](#element-properties-and-methods)
 
 
 ## Introduction to the document
@@ -42,7 +43,7 @@ A big part of working with JavaScript in the Web Browser is interacting with ele
 - Including the connected device itself, like webcam, audio, battery level, GPS coordinates, and other specific features live on navigator
 
 
-## Selecting Element
+## Selecting Elements
 
 **Note**: Always load scripts before the closing body tag (`</body>`) when selecting elements on the page. All elements must be loaded first before we start selecting them in JavaScript. We get `null` if we try to grab elements placing the `<script>` tag in the `<head>` because the elements are not yet created when the JavaScript is run.
 
@@ -75,4 +76,32 @@ We can use things like:
 - **Parent-child selector** to grab images inside div with class item (`'.item img'`)
 
 **Note**: We also have dated ways of selecting elements from DOM like `getElementById()`, `getElementsByClassName()`, `getElementsByTagName()`, and etc.
+
+
+## Element Properties and Methods
+
+If we do `console.dir()` after selecting an element then we can see that the selected element is actually an object and we can see the object properties.
+
+We can use these properties as either _getters_ or _setters_.
+
+- _getter_ is to display the content
+- _setter_ is when you update the content 
+- `textContent` gets all the element including script and style elements
+- `innerText` only shows human readable elements
+- `innerHTML` is used to get or set the HTML content of an element
+- `outerHTML` is used to get the specified HTML element including all its descendant content or replace the contents in an element
+- `insertAdjacentText` method inserts a given text node at a given position relative to the element it is invoked upon
+  - **positon**
+    - `beforebegin`
+    - `afterbegin`
+    - `beforeend`
+    - `afterend`
+  - **element**: represeting the text to be inserted
+- **Elements** are wrapped in a tags
+- **Nodes** can be anything
+
+### References
+
+- [Element properties & methods](https://developer.mozilla.org/en-US/docs/Web/API/Element)
+- [Node properties & methods](https://developer.mozilla.org/en-US/docs/Web/API/Node)
 
