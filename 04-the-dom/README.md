@@ -3,6 +3,7 @@
 - [Introduction to the document](#introduction-to-the-document)
 - [Selecting Elements](#selecting-elements)
 - [Element Properties and Methods](#element-properties-and-methods)
+- [Working with Classes](#working-with-classes)
 
 
 ## Introduction to the document
@@ -52,25 +53,12 @@ A big part of working with JavaScript in the Web Browser is interacting with ele
 - Use defer and async
 - Listen for the `DOMContentLoaded` event and then try to select elements from the page
 
-### `querySelector()`
+### `querySelector()` and `querySelectorAll()` method
 
-Returns first match
-
-```js
-const p = document.querySelector('p');
-```
-
-### `querySelectorAll()`
-
-Returns all matches as a **NodeList** (like array but without array helper functions)
-
-```js
-const p = document.querySelectorAll('p');
-```
+- `querySelector()` returns the first match element
+- `querySelectorAll()` returns all matches as a **NodeList** (like array but without array helper functions)
 
 In `querySelector()` and `querySelectorAll()`, the argument we pass are almost exactly the same as CSS Selectors.
-
-We can use things like:
 
 - `.item` (element with class of item) or `div.item` (div with class of item)
 - **Parent-child selector** to grab images inside div with class item (`'.item img'`)
@@ -80,17 +68,17 @@ We can use things like:
 
 ## Element Properties and Methods
 
-If we do `console.dir()` after selecting an element then we can see that the selected element is actually an object and we can see the object properties.
+If we do `console.dir()` method after selecting an element then we can see that the selected element is actually an object and we can see the object properties.
 
 We can use these properties as either _getters_ or _setters_.
 
-- _getter_ is to display the content
+- _getter_ is to when you display the content
 - _setter_ is when you update the content 
-- `textContent` gets all the element including script and style elements
-- `innerText` only shows human readable elements
-- `innerHTML` is used to get or set the HTML content of an element
-- `outerHTML` is used to get the specified HTML element including all its descendant content or replace the contents in an element
-- `insertAdjacentText` method inserts a given text node at a given position relative to the element it is invoked upon
+- `textContent` property gets all the element including script and style elements
+- `innerText` property only shows human readable elements
+- `innerHTML` property is used to get or set the HTML content of an element
+- `outerHTML` property is used to get the specified HTML element including all its descendant content or replace the contents in an element
+- `insertAdjacentText()` method inserts a given text node at a given position relative to the element it is invoked upon
   - **positon**
     - `beforebegin`
     - `afterbegin`
@@ -105,3 +93,15 @@ We can use these properties as either _getters_ or _setters_.
 - [Element properties & methods](https://developer.mozilla.org/en-US/docs/Web/API/Element)
 - [Node properties & methods](https://developer.mozilla.org/en-US/docs/Web/API/Node)
 
+
+## Working with Classes
+
+- select elements class using `getElementsByClassName()` or `querySelector() method`
+- `classList()` property returns a **DOMTokenList** collection of the class attributes of the element
+- **DOMTokenList** is an array-like object with a length property and you can index it to retrieve the individual tokens
+- **DOMTokenList prototype** displays the lists of methods that can be call against the selected `classList()`
+- `add()` method adds _token_ or a class to the list
+- `remove()` method adds _token_ or a class to the list
+- `toggle()` method removes a given token from the list then return false and if token doesn't exist it's added and the function returns true
+- `contains()` method returns a **Boolean**, true if the underlying list contains the given token/class, otherwise false
+- `className` property gets and sets the value of the class attribute of the specified element

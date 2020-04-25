@@ -3,6 +3,7 @@
 //   console.log(p);
 // });
 
+/*
 const p = document.querySelector('p');
 const imgs = document.querySelectorAll('.item img');
 const item2 = document.querySelector('.item2');
@@ -25,3 +26,18 @@ console.log(pizzaList.textContent);
 // pizzaList.textContent = `${pizzaList.textContent} 🍕`; // becomes slow for long text
 pizzaList.insertAdjacentText('afterbegin', '🍕');
 pizzaList.insertAdjacentText('beforeend', '🍕');
+*/
+
+// Classes!
+const pic = document.querySelector('.nice');
+pic.classList.add('open');
+pic.classList.remove('cool');
+console.log(pic.classList);
+
+function toggleRound() {
+  pic.classList.toggle('round');
+}
+
+pic.addEventListener('click', toggleRound);
+pic.classList.contains('round');
+// pic.className();
