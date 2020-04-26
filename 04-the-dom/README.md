@@ -4,6 +4,7 @@
 - [Selecting Elements](#selecting-elements)
 - [Element Properties and Methods](#element-properties-and-methods)
 - [Working with Classes](#working-with-classes)
+- [Build in and Custom Data Attributes](#build-in-and-custom-data-attributes)
 
 
 ## Introduction to the document
@@ -14,34 +15,34 @@ When we view HTML in the browser, the browser turns the HTML into the **Document
 
 A big part of working with JavaScript in the Web Browser is interacting with elements on a page such as:
 
-- Clicks
-- Scrolls
-- Add/remove or modify elements
-- Add/remove classes to the elements to trigger css animations
-- Fetch a new data
-- Play music and videos
+- clicks
+- scrolls
+- add/remove or modify elements
+- add/remove classes to the elements to trigger css animations
+- fetch a new data
+- play music and videos
 
 **Note**: Very helpful to understand the concepts of the DOM like events, elements and classes when you are planning to use a JavaScript framework.
 
 ### The `window` object
 
-- Global scope of the browser
-- Where all the global variables are stored
-- Helpful properties like:
+- global scope of the browser
+- where all the global variables are stored
+- helpful properties like:
   - `location` displays the current tab location
   - `innerWidth` displays the actual width of the browser
-- It is everything about the currently open window including browser bar. tabs, scrollbars, etc
+- it is everything about the currently open window including browser bar. tabs, scrollbars, etc
 
 ### The `document` object
 
-- Responsible for everything starting `<!DOCTYPE html>`, `<html>` to `</html>`
-- Not concerned with browser bar, tabs, scrollbars, etc
+- responsible for everything starting `<!DOCTYPE html>`, `<html>` to `</html>`
+- not concerned with browser bar, tabs, scrollbars, etc
 
 ### The `navigator` object
 
-- Higher level than `window` object
-- Displays information about the browser
-- Including the connected device itself, like webcam, audio, battery level, GPS coordinates, and other specific features live on navigator
+- higher level than `window` object
+- displays information about the browser
+- including the connected device itself, like webcam, audio, battery level, GPS coordinates, and other specific features live on navigator
 
 
 ## Selecting Elements
@@ -50,8 +51,8 @@ A big part of working with JavaScript in the Web Browser is interacting with ele
 
 **Alternative**: When `<script>` is in the `<head>`.
 
-- Use defer and async
-- Listen for the `DOMContentLoaded` event and then try to select elements from the page
+- use `defer` and `async`
+- listen for the `DOMContentLoaded` event and then try to select elements from the page
 
 ### `querySelector()` and `querySelectorAll()` method
 
@@ -105,3 +106,20 @@ We can use these properties as either _getters_ or _setters_.
 - `toggle()` method removes a given token from the list then return false and if token doesn't exist it's added and the function returns true
 - `contains()` method returns a **Boolean**, true if the underlying list contains the given token/class, otherwise false
 - `className` property gets and sets the value of the class attribute of the specified element
+
+
+## Build in and Custom Data Attributes
+
+Attributes are provided to the element as additional information.
+
+- standard attributes, E.g., `class`, `src`, `alt`, `title`, `width`, `height`, etc
+- `getAttribute()` method to display the content of the selected attribute
+- `setAttribute()` method used to set an attribute and content
+- `hasAttribute()` method returns Boolean true or false, if it is set or not
+- difference between `setAttribute()` method and dot notation by setting and getting a property on the object
+  - `setAttribute()` also worked for things that are not standard attributes
+- `data-` attributes are used when you want to create your own custom attributes to attached data to an element
+- `dataset` property displays an object with property values
+ it has
+ 
+**Note**: You should not set or make a non-standard attributes, it may clash on your legacy codes with actual standard attributes, which leads to some bugs

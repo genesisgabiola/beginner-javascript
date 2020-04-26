@@ -41,3 +41,25 @@ function toggleRound() {
 pic.addEventListener('click', toggleRound);
 pic.classList.contains('round');
 // pic.className();
+
+// Attributes
+pic.alt = 'Cute Pup'; // setter
+console.log(pic.alt); // getter
+console.log(pic.naturalWidth); // getter
+pic.width = 200;
+
+// pic.addEventListener('load', function() {
+//   console.log(pic.naturalWidth); // getter
+// });
+
+// pic.setAttribute('alt', 'REALLY CUTE PUP');
+// pic.setAttribute('genesis-is-cool', 'REALLY CUTE PUP');
+// console.log(pic.getAttribute('alt'));
+// pic.hasAttribute('alt');
+
+const custom = document.querySelector('.custom');
+console.log(custom.dataset);
+
+custom.addEventListener('click', function() {
+  alert(`Welcome ${custom.dataset.name} ${custom.dataset.last}`);
+});
