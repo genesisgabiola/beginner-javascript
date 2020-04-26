@@ -6,6 +6,7 @@
 - [Working with Classes](#working-with-classes)
 - [Build in and Custom Data Attributes](#build-in-and-custom-data-attributes)
 - [Creating HTML](#creating-html)
+- [HTML from Strings and XSS](#html-from-strings-and-xss)
 
 
 ## Introduction to the document
@@ -141,3 +142,21 @@ Attributes are provided to the element as additional information.
     - `afterend`
   - **element**: represeting the element to be inserted
 - `cloneNode()` method returns a duplicate of the node on which method was called
+
+
+## HTML from Strings and XSS
+
+- create the HTML with text, then insert the HTML into an item
+- if its a valid HTML, the browser will parse it and turn it into all of the items
+- using backticks instead of a regular quotations alows us to have a multiple lines
+- using backticks we can do **interpolation**, which allows us to inject variables or values directly into a string
+- adding indentation when creating HTML inside backticks gives a better readablity of our code
+- doing this kind of approach has some downsides
+  - creating HTML with backticks or strings gives us a `typeof` strings
+  - meaning you can't do things with properties and method on it, which gives us an error like `Cannot read property...` or `undefined`
+- `createRange()` method returns a new `Range` object
+- `Range` represents a fragments of a document that can contain nodes and parts of text nodes
+- `createContextualFragment()` method returns a `DocumentFragment` by invoking the HTML fragment
+- `DocumentFragment` represents a minimal document object that has no parent, which we can access now as DOM elements
+- use appends or insertAdjacent to display them in the document
+- **Cross-site Scripting (XSS)** is a client-side code injection attack.
