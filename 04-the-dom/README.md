@@ -5,6 +5,7 @@
 - [Element Properties and Methods](#element-properties-and-methods)
 - [Working with Classes](#working-with-classes)
 - [Build in and Custom Data Attributes](#build-in-and-custom-data-attributes)
+- [Creating HTML](#creating-html)
 
 
 ## Introduction to the document
@@ -123,3 +124,20 @@ Attributes are provided to the element as additional information.
  it has
  
 **Note**: You should not set or make a non-standard attributes, it may clash on your legacy codes with actual standard attributes, which leads to some bugs
+
+
+## Creating HTML
+
+- `createElement()` method creates the HTML element
+- `appendChild()` method is used to add a node to the end of the list of children of a specfied parent node
+- `body` element is already available by default through the `document` object as its property
+- **Note**: If you do a lot of appending, better to put the last append for everything at the end of `appendChild` to only cause 1 load for it
+- `append()` method inserts a set of Node objects after the last child of the ParentNode
+- `insertAdjacentElement()` method inserts a given element node at a given position relative to the element it is invoked upon
+  - **positon**
+    - `beforebegin`
+    - `afterbegin`
+    - `beforeend`
+    - `afterend`
+  - **element**: represeting the element to be inserted
+- `cloneNode()` method returns a duplicate of the node on which method was called
