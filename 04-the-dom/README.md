@@ -7,6 +7,7 @@
 - [Build in and Custom Data Attributes](#build-in-and-custom-data-attributes)
 - [Creating HTML](#creating-html)
 - [HTML from Strings and XSS](#html-from-strings-and-xss)
+- [Traversing and Removing Nodes](#traversing-and-removing-nodes)
 
 
 ## Introduction to the document
@@ -160,3 +161,29 @@ Attributes are provided to the element as additional information.
 - `DocumentFragment` represents a minimal document object that has no parent, which we can access now as DOM elements
 - use appends or insertAdjacent to display them in the document
 - **Cross-site Scripting (XSS)** is a client-side code injection attack.
+
+
+## Traversing and Removing Nodes
+
+- difference: elements are wrapped in a tags, however node can be anything
+- `remove()` method is used to remove an element or node
+
+### Elements Properties
+
+- `children` property ignores plain text nodes and display only the element
+- `firstElementChild` property display only the first element
+- `lastElementChild` property display only the last element
+- `previousElementSibling` property display only the previous element sibling
+- `nextElementSibling` property display the next element sibling
+- `parentElement` property display the parent's element
+
+### Nodes Properties
+
+- `childNodes` property display everything including the text
+- `firstChild` property display only the first node
+- `lastChild` property display only the last node
+- `previousSibling` property display the previous node sibling
+- `nextSibling` property display the next node sibling
+- `parentNode` property display the node's parent
+
+**Note**: Removing an element we created and exist in the JavaScript memory, means we still have access to that element.
