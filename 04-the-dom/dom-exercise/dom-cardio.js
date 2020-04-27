@@ -55,13 +55,21 @@ htmlWrapper.firstElementChild.remove();
 //   <h2>NAME — AGE</h2>
 //   <p>They are HEIGHT and AGE years old. In Dog years this person would be AGEINDOGYEARS. That would be a tall dog!</p>
 // </div>
+function convertToFeet(cm) {
+  const realFeet = (cm * 0.3937) / 12;
+  const feet = Math.floor(realFeet);
+  const inches = Math.round((realFeet - feet) * 12);
+  return `${feet}&prime;${inches}&Prime;`;
+}
 
 function generatePlayerCard(name, age, height) {
   console.log(name.charAt(0));
   return `
     <div class="playerCard">
       <h2>${name} — ${age}</h2>
-      <p>Their height is ${height} and ${age} years old. In Dog years this person would be ${age *
+      <p>Their height is ${convertToFeet(
+        height
+      )} and ${age} years old. In Dog years this person would be ${age *
     7}. That would be a tall dog!</p>
       <button class="btn remove">&times; Delete</button>
     </div>
