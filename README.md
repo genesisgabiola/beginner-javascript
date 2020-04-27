@@ -16,8 +16,8 @@ Course Created by Wes Bos
 - [x] [The Basics](./01-the-basics)
 - [x] [Functions](./02-functions)
 - [x] [The Tricky Bits](./03-the-tricky-bit)
-- [ ] [The DOM - Working with HTML and CSS](./04-the-dom)
-- [ ] Events
+- [x] [The DOM - Working with HTML and CSS](./04-the-dom)
+- [ ] [Events](./05-events)
 - [ ] Serious Practice Exercises
 - [ ] Logic and Flow Control
 - [ ] Data Types

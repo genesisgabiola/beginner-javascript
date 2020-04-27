@@ -63,10 +63,9 @@ function convertToFeet(cm) {
 }
 
 function generatePlayerCard(name, age, height) {
-  console.log(name.charAt(0));
   return `
     <div class="playerCard">
-      <h2>${name} — ${age}</h2>
+      <h2>${name.charAt(0).toUpperCase() + name.slice(1)} — ${age}</h2>
       <p>Their height is ${convertToFeet(
         height
       )} and ${age} years old. In Dog years this person would be ${age *
